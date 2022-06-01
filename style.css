@@ -26,6 +26,7 @@ main {
     background-position: center;
     height: 100vh;
     padding: 40px;
+    position: relative;
 }
 
 header {
@@ -38,7 +39,7 @@ header {
     display: flex;
 }
 
-.menu {
+.main-header>img {
     display: none;
 }
 
@@ -46,6 +47,63 @@ header {
     list-style: none;
     padding:0 20px;
 }
+
+.hidden_menu {
+    position: absolute;
+    display: block;
+    background-color: var(--color-white);
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 7vh;
+    height: 35vh;
+    z-index: 8;
+    border-radius: 20px;
+    transform:  scale(0);
+    transition: .5s ease-in-out;
+}
+
+.hidden_menu.active {
+    transform: scale(1);
+}
+
+.hidden_menu ul li {
+    list-style: none;
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.hidden_menu ul li a:hover{
+    color: var(--color-yellow);
+}
+
+#c_b {
+    background-color: var(--color-yellow);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: var(--font-family);
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+#c_b:hover {
+    background-color: hsla(167, 40%, 24%,0.6);
+    color: var(--color-yellow);
+    border: 2px wavy var(--color-yellow);
+}
+
+
+.hidden_menu ul li a{
+    text-decoration: none;
+    color: var(--color-Dark-blue);
+    font-weight: 500;
+}
+
+
 
 .main-nav-links li a{
     text-decoration: none;
@@ -151,8 +209,6 @@ header {
     width: 50%;
 }
 
-
-
 .photography {
     position: relative;
     background-image: url(./images/desktop/image-photography.jpg);
@@ -205,6 +261,10 @@ header {
 .milkbottles {
     width: 24.4vw;
     grid-column: 1/2;
+}
+
+.image-menu {
+    display: none;
 }
 
 .orange {
@@ -299,8 +359,6 @@ footer {
     cursor: pointer;
 }
 
-
-
 .attribution { 
     font-size: 11px;
     text-align: center; 
@@ -325,6 +383,8 @@ footer {
     .main-nav {
         display: none;
     }
+
+    
 
     .main-content {
         font-size: 20px;
@@ -451,4 +511,11 @@ footer {
     footer {
         padding:30px 0;
     }
+
+    .main-header>img {
+        display: block;
+        cursor: pointer;
+    }
+    
+
 }

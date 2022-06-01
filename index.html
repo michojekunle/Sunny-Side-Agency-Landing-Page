@@ -17,6 +17,14 @@
 </head>
 <body>
   <main class="landing-page">
+      <div class="hidden_menu"> 
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#" id="c_b">Contacts</a></li>
+        </ul>
+      </div>
     <header class="main-header">
       <div class="logo">
         <img src="./images/logo.svg" class="logo">
@@ -29,6 +37,7 @@
           <li><a href="#" id="contact-button">Contact</a></li>
         </ul> 
       </nav>
+      <img id="open-menu" src="./images/mobile/icons8-menu.svg">
     </header>
      <h1 class="main-content">We are creatives</h1>
      <img src="./images/icon-arrow-down.svg" id="arrd">
@@ -51,7 +60,7 @@
           </h2>
         </div>
         <div class="right1">
-          <img src="./images/desktop/image-transform.jpg" class="img">
+          <img id="close-menu" src="./images/desktop/image-transform.jpg" class="img">
         </div>
       </div>
     </div>
@@ -172,11 +181,41 @@
     <img src="./images/icon-twitter.svg" alt="">
     <img src="./images/icon-pinterest.svg" alt="">
   </div>
+
   </footer>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Ayo_Mich</a>.
   </div>
+
+  <script>
+    const openMenuButton = document.getElementById('open-menu')
+    const closeMenuButton = document.getElementById('close-menu')
+
+    openMenuButton.addEventListener('click', () =>{
+      const modals = document.querySelectorAll('.hidden_menu')
+      modals.forEach(hidden_menu =>{
+        openMenu(hidden_menu)
+      })
+    })
+
+    closeMenuButton.addEventListener('click', () => {
+    const modals =  document.querySelectorAll('.hidden_menu.active')
+    modals.forEach(hidden_menu => {
+        closeMenu(hidden_menu)
+    })
+})
+
+    function openMenu(hidden_menu) {
+    if (hidden_menu==null) return
+        hidden_menu.classList.add('active')
+    }
+
+    function closeMenu(hidden_menu) {
+    if (hidden_menu==null) return
+        hidden_menu.classList.remove('active') 
+    }
+  </script>
 </body>
 </html>
