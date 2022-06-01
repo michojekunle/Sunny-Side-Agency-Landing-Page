@@ -80,30 +80,33 @@ header {
     letter-spacing: 8px;
 }
 
+.section-one-a {
+   display: flex;
+}
+
+.left1, .left2, .right1, .right2 {
+    width: 50%;
+
+}
+
+.section-one-b {
+    display: flex;
+}
+
+.section-one-c {
+    display: flex;
+}
+
 #arrd {
     position: relative;
     left: 50%;
-
 }
 
 .section-one {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
 }
 .img {
     width: 49.3vw;
-}
-
-.right {
-    align-items: center;
-    grid-column: 2/3;
-}
-
-.left {
-    align-items: center;
-    grid-column: 1/2;
 }
 
 .text {
@@ -144,7 +147,11 @@ header {
     background-size: 100% 100%;
     text-align: center;
     justify-content: center;
+    height: 80vh;
+    width: 50%;
 }
+
+
 
 .photography {
     position: relative;
@@ -154,6 +161,8 @@ header {
     text-align: center;
     justify-content: center;
     color: var(--color-Dark-blue);
+    height: 80vh;
+    width: 50%;
 }
 
 .graphic-design>.main-title, .photography>.main-title {
@@ -320,19 +329,40 @@ footer {
     .main-content {
         font-size: 20px;
         padding-top: 30px;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
         text-align: center;
     }
     
     .arrd {
+        position:relative;
+        left: 50%;
         height:40px;
     }
-    
+
     .section-one {
         display: flex;
         flex-direction: column;
         width: 100vw;
         justify-content: center;
+    }
+    .section-one-a {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .section-one-b, .section-one-c {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left1,.right2 {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    .graphic-design, .photography{
+        width: 100%;
     }
 
     .main-title {
@@ -341,11 +371,6 @@ footer {
 
     .sections-paragraph {
         font-size: 16px;
-    }
-
-    .column-rev {
-        display: flex;
-        flex-direction: column-reverse;
     }
 
     .learn_more {
@@ -396,8 +421,6 @@ footer {
     .footer_nav ul li a{
         padding:0 10px;
     }
-
-
 
     .img {
         width: 100vw;
