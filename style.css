@@ -95,6 +95,7 @@ header {
     border-radius: 30px;
     text-align: center;
     padding: 15px 30px;
+    transition: 0.8s;
 }
 
 #c_b:hover {
