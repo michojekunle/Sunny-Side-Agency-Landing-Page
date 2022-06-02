@@ -75,7 +75,7 @@ header {
     margin: 30px 0;
     font-size: 18px;
     font-weight: 700;
-    transition: .8s;
+    transition: 1.8s;
 }
 
 .hidden_menu ul li a:hover{
