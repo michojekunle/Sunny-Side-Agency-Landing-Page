@@ -65,10 +65,6 @@ header {
     overflow: hidden;
 }
 
-.hidden_menu .active {
-    transform: scale(1);
-}
-
 .hidden_menu ul li {
     position: relative;
     list-style: none;
@@ -114,6 +110,12 @@ header {
     color: var(--color-Dark-blue);
     font-weight: 500;
 }
+
+
+.hidden_menu .active {
+    transform: scale(1);
+}
+
 
 
 
