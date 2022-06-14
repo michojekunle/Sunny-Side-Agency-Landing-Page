@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -37,7 +37,7 @@
           <li><a href="#" id="contact-button">Contact</a></li>
         </ul> 
       </nav>
-      <img id="open-menu" src="./images/mobile/icons8-menu.svg">
+      <img id="open-menu" onclick="toggleMenu()" src="./images/mobile/icons8-menu.svg">
     </header>
      <h1 class="main-content">We are creatives</h1>
      <img src="./images/icon-arrow-down.svg" id="arrd">
@@ -190,32 +190,35 @@
   </div>
 
   <script>
-    const openMenuButton = document.getElementById('open-menu')
-    const closeMenuButton = document.getElementById('close-menu')
+   
+   const toggleMenu = () => {
+      const hiddenMenu = document.getElementsByClassName('hidden_menu');
+      hiddenMenu.classList.toggle('active');
+   }
+   // const openMenuButton = document.getElementById('open-menu');
+    // const modals = document.querySelectorAll('hidden_menu');
+    
 
-    openMenuButton.addEventListener('click', () =>{
-      const modals = document.querySelectorAll('.hidden_menu')
-      modals.forEach(hidden_menu =>{
-        openMenu(hidden_menu)
-      })
-    })
+    // openMenuButton.addEventListener('click', () =>{
+    //   modals.classList.toggle('active');
+    // })
 
-    closeMenuButton.addEventListener('click', () => {
-    const modals =  document.querySelectorAll('.hidden_menu.active')
-    modals.forEach(hidden_menu => {
-        closeMenu(hidden_menu)
-    })
-})
+//     closeMenuButton.addEventListener('click', () => {
+//     const modals =  document.querySelectorAll('.hidden_menu.active')
+//     modals.forEach(hidden_menu => {
+//         closeMenu(hidden_menu)
+//     })
+// })
 
-    function openMenu(hidden_menu) {
-    if (hidden_menu==null) return
-        hidden_menu.classList.add('active')
-    }
+//     function openMenu(hidden_menu) {
+//     if (hidden_menu==null) return
+//         hidden_menu.classList.add('active')
+//     }
 
-    function closeMenu(hidden_menu) {
-    if (hidden_menu==null) return
-        hidden_menu.classList.remove('active') 
-    }
+//     function closeMenu(hidden_menu) {
+//     if (hidden_menu==null) return
+//         hidden_menu.classList.remove('active') 
+//     }
   </script>
 </body>
 </html>
