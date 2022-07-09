@@ -19,6 +19,11 @@
    --font-family: 'Fraunces', serif;
 }
 
+body {
+    width:100vw;
+    overflow:hidden2;
+}
+
 main {
     background-image: url(./images/desktop/image-header.jpg);
     background-size: 100% 100%;
