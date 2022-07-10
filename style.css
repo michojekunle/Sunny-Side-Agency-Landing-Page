@@ -55,8 +55,11 @@ header {
 
 .hidden_menu {
     position: absolute;
-    display: block;
-    right: 5vw;
+    display: flex;
+    flex-direction:column;
+align-items:center;
+justify-content:center;
+    right: 0;
     background-color: var(--color-white);
     width:80%;
     margin-top: 7vh;
@@ -66,6 +69,10 @@ header {
     transform:  translateX(200%);
     transition: .5s ease-in-out;
     overflow: hidden;
+}
+
+.hidden_menu ul li {
+list-style:none;
 }
 
 .hidden_menu ul li a {
