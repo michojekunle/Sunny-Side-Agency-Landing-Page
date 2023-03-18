@@ -55,18 +55,20 @@ header {
 
 .hidden_menu {
     position: absolute;
-    display: none;
+    display: flex;
     opacity: 0;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     background-color: var(--color-white);
     min-width:250px;
-    width: 75%;
+    width: 100%;
+    right: 0;
     margin-top: 7vh;
     text-align: center;
     z-index: 2;
     padding: 20px;
+    transform: scale(0) translateX(-100%);
     transition: opacity .5s .2s ease-in-out;
     overflow: hidden;
 }
@@ -114,7 +116,7 @@ header {
 }
 
 .hidden_menu.active {
-    display: flex;
+    transform: scale(1) translateX(0);
     opacity: 1;
 }
 
