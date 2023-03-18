@@ -20,8 +20,8 @@
 }
 
 body {
-    width:100vw;
-    overflow:hidden;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 main {
@@ -55,24 +55,25 @@ header {
 
 .hidden_menu {
     position: absolute;
-    display: flex;
+    display: none;
+    opacity: 0;
     flex-direction:column;
-align-items:center;
-justify-content:center;
-    right: 0;
+    align-items:center;
+    justify-content:center;
     background-color: var(--color-white);
-    width:80%;
+    min-width:250px;
+    width: 75%;
     margin-top: 7vh;
     text-align: center;
     z-index: 2;
     padding: 20px;
-    transform:  translateX(200%);
-    transition: .5s ease-in-out;
+    transition: opacity .5s .2s ease-in-out;
     overflow: hidden;
 }
 
 .hidden_menu ul li {
-list-style:none;
+    list-style:none;
+    margin: 20px 0;
 }
 
 .hidden_menu ul li a {
@@ -113,7 +114,8 @@ list-style:none;
 }
 
 .hidden_menu.active {
-    transform: translateX(0);
+    display: flex;
+    opacity: 1;
 }
 
 .main-nav-links li a{
